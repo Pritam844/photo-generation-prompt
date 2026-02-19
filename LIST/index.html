@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Info Hub</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #dbd7d7;
+            color: #111;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* PROFILE IMAGE */
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 10px 0 5px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .link {
+            display: block;
+            text-decoration: none;
+            background: #f5f5f5;
+            color: #000;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .link:hover {
+            background: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- PROFILE -->
+    <img src="igp.jpeg" alt="Profile Photo" class="profile-pic">
+
+    <h1>@photo_prompt</h1>
+    <p>Photo prompts | AI generator</p>
+
+    <!-- SEARCH -->
+    <input type="text" id="search" placeholder="Search Post...." onkeyup="searchLinks()">
+
+    <!-- LINKS -->
+    <a class="link" href="https://instagram.com" target="_blank">Instagram</a>
+    <a class="link" href="#">POST 1</a>
+   <!-- <a class="link" href="#"></a>
+    <a class="link" href="#"></a> -->
+
+</div>
+
+<script>
+function searchLinks() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let links = document.getElementsByClassName("link");
+
+    for (let i = 0; i < links.length; i++) {
+        let text = links[i].innerText.toLowerCase();
+        links[i].style.display = text.includes(input) ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
