@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- 🔥 IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Info Hub</title>
 
     <style>
@@ -10,14 +14,16 @@
             background: #dbd7d7;
             color: #111;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
+            margin: 0;
         }
 
         .card {
+            width: 100%;
             max-width: 420px;
             margin: auto;
             background: #ffffff;
-            padding: 25px;
+            padding: 20px;
             border-radius: 14px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
@@ -32,7 +38,7 @@
         }
 
         h1 {
-            font-size: 20px;
+            font-size: 18px;
             margin: 10px 0 5px;
         }
 
@@ -43,12 +49,13 @@
         }
 
         input {
-            width: 90%;
-            padding: 10px;
+            width: 100%;
+            padding: 12px;
             border-radius: 8px;
             border: 1px solid #ddd;
             margin-bottom: 15px;
             font-size: 14px;
+            box-sizing: border-box;
         }
 
         .link {
@@ -57,7 +64,7 @@
             background: #f5f5f5;
             color: #000;
             margin: 10px 0;
-            padding: 12px;
+            padding: 14px;
             border-radius: 8px;
             font-weight: bold;
             transition: 0.2s;
@@ -66,26 +73,32 @@
         .link:hover {
             background: #e6e6e6;
         }
+
+        /* 📱 EXTRA SMALL SCREENS */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 16px;
+            }
+            .profile-pic {
+                width: 75px;
+                height: 75px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="card">
 
-    <!-- PROFILE -->
     <img src="igp.jpeg" alt="Profile Photo" class="profile-pic">
 
     <h1>PRITAM CHOWDHURY</h1>
     <p>Photo prompts | AI generator</p>
 
-    <!-- SEARCH -->
-    <input type="text" id="search" placeholder="Search Post...." onkeyup="searchLinks()">
+    <input type="text" id="search" placeholder="Search Post..." onkeyup="searchLinks()">
 
-    <!-- LINKS -->
     <a class="link" href="https://www.instagram.com/ai_photo_generator_prompt/" target="_blank">Instagram</a>
     <a class="link" href="post1.html">POST 1</a>
-   <!-- <a class="link" href="#"></a>
-    <a class="link" href="#"></a> -->
 
 </div>
 
@@ -103,6 +116,3 @@ function searchLinks() {
 
 </body>
 </html>
-
-
-
