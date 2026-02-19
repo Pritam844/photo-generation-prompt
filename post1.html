@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- 🔥 REQUIRED FOR MOBILE -->
+    <!-- REQUIRED -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Post 1 – Photo Prompt</title>
 
     <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f2f2f2;
-            padding: 16px;
-            color: #111;
             margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .container {
             width: 100%;
             max-width: 700px;
-            margin: auto;
             background: #ffffff;
             padding: 18px;
             border-radius: 12px;
@@ -31,11 +39,6 @@
             text-align: center;
             margin-bottom: 16px;
             font-size: 18px;
-        }
-
-        h3 {
-            margin-top: 18px;
-            color: #333;
         }
 
         .prompt-box {
@@ -49,7 +52,6 @@
         }
 
         button {
-            display: block;
             width: 100%;
             margin-top: 20px;
             padding: 14px;
@@ -73,16 +75,6 @@
             color: #555;
             font-size: 14px;
         }
-
-        /* 📱 VERY SMALL PHONES */
-        @media (max-width: 360px) {
-            h1 {
-                font-size: 16px;
-            }
-            .prompt-box {
-                font-size: 13px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -101,10 +93,10 @@ Pose and Interaction:
 A relaxed yet defiant pose. The person is lying on the hood of a wrecked car; one arm is thrown behind his head, the other hand holds a gun twirled on his finger. Legs are wide apart; one leg hangs down from the bumper, the other rests on the hood. His back and hips are in firm contact with the windshield and metal surface.
 
 Camera and Angle:
-Medium-long shot (full shot). Slightly upward-facing camera angle to create a heroic and monumental effect. Approximate 35mm focal length, wide angle capturing the surroundings.
+Medium-long shot (full shot). Slightly upward-facing camera angle to create a heroic and monumental effect. Approximate 35mm focal length.
 
 Appearance and Materials:
-Red and black tactical suit, superhero gear style (Deadpool-inspired). High-detail textures, cinematic lighting, dramatic atmosphere.
+Red and black tactical suit, superhero gear style (Deadpool-inspired). Cinematic lighting.
     </div>
 
     <button onclick="copyPrompt()">📋 Copy Prompt</button>
