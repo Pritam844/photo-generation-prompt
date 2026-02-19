@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+            color: #111;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #000;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 1 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+Identity:
+Appearance, skin tone, eye and hair color must be taken directly from the FaceID reference.
+
+Geometry and Visibility:
+Male figure shown in full length. Head is fully uncovered; hairline and ears are clearly visible. The body is completely covered from neck to feet in a tight tactical suit. Gloves are worn on the hands and gloved hands are visible.
+
+Pose and Interaction:
+A relaxed yet defiant pose. The person is lying on the hood of a wrecked car; one arm is thrown behind his head, the other hand holds a gun twirled on his finger. Legs are wide apart; one leg hangs down from the bumper, the other rests on the hood. His back and hips are in firm contact with the windshield and metal surface.
+
+Camera and Angle:
+Medium-long shot (full shot). Slightly upward-facing camera angle to create a heroic and monumental effect. Approximate 35mm focal length, wide angle capturing the surroundings.
+
+Appearance and Materials:
+Red and black tactical suit, superhero gear style (Deadpool-inspired). High-detail textures, cinematic lighting, dramatic atmosphere.
+    </div>
+
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>
