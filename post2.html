@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 2 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+SELFIE PHOTO, a selfie taken with one hand. Use the attached PERSON photo as an identification reference: face
+
+and resemblance must be exactly the same, no changes should be made to the face. The person is taking the selfie with ONE HAND: right
+
+arm fully extended, camera/phone held just outside the frame; slight shoulder raise and
+
+natural wrist angle, slight body rotation typical of one-handed selfies. The other hand is relaxed and EMPTY, holding nothing. Phone/camera is not visible. Composition: close-up head and shoulders frame, 9:16 vertical
+
+format, everyone tightly grouped around the person. Slight wide-angle
+
+perspective distortion typical of one-handed selfie lenses. The setting feels like a warm and
+
+clunky bedroom/studio with vintage decor, as in the attached ROOM reference; however, the shot was taken during the day with NATURAL window light coming from one side. Balanced exposure, soft shadows, and clean, natural colors.
+
+Camera: Super ultra-wide selfie lens view (arm fully extended), natural skin texture, faces are clear,
+
+realistic depth of field (background not overly blurred). All characters are present, realistic, high-level
+
+rendered in 3D with real materials and physically based lighting (not flat cartoon):
+
+Woody: Leaning forward over his left shoulder, hat visible, friendly expression. Buzz Lightyear: Leaning over his right shoulder, helmet open, confident smile. Rex: In the background, peeking his head between Woody and Buzz, playful grin. Mr. Potato Head: In the lower left, slightly closer to the camera, funny expression. Slinky Dog: Circling the group from the lower right, head visible and smiling, body curving. Lotso: Slightly behind and higher up the group, plush bear texture clearly visible, warm but slightly mischievous smile. Everyone is positioned around the person's shoulders and
+
+behind them; no one is covering the person's face, all eyes are looking at the lens. Ultra-realistic
+
+details: accurate fabric weave details, specular reflections on plastic surfaces, plush fur fibers,
+
+slight subsurface scattering effect on the skin, natural and grounded shadows in the space.
+    </div>
+
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>
