@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 4 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+Hyperrealistic night photography, a natural and spontaneous lifestyle snapshot. A young man is clearing snow from the driveway of a luxurious, modern, and minimalist home. He is positioned in the left foreground of the frame; leaning forward and pushing a large black snow shovel filled with snow. He is wearing a vintage-style fleece jacket with beige/yellowish details on the shoulders and sleeves, dark wide-leg pants, a baseball cap, and light-colored sneakers. The hair should be exactly the same as the original reference — same length, same texture, and same style (not long). The face and hair should be preserved without distortion, as in the original photograph. A slight motion blur is used to give a sense of movement. In the center of the background, a glossy black Mercedes-Benz CLS 63 AMG (W219) is parked in the snowy driveway, seen from behind. The car's distinctive red LED taillights are brightly lit, casting a red reflection on the white snow behind it. In the background, there is a modern white house with a flat roof and black frame details. Under the roof eaves, recessed warm LED lighting illuminates the walls and entryway. On the left is a black garage door, and on the right is a large rectangular window reflecting the night. The ground is completely covered in snow; shovel marks, tire tracks, and detailed snow texture are clearly visible. High-contrast lighting, a cold winter atmosphere, sharp clarity, and 4K resolution.
+    </div>
+
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>
