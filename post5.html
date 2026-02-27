@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 5 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+A high-energy night photograph taken on the deck of a modern Turkish Navy aircraft carrier. The image is captured handheld on an iPhone using a harsh, direct camera flash. The framing is slightly flawed and slightly tilted, creating a raw and spontaneous feeling.
+
+In the foreground, a young man stands fully equipped in modern military gear. His helmet and tactical vest are tightly fastened against the wind. He has a subtle, confident smile on his face. One hand is raised near his temple in a half-salute that feels playful rather than formal. The Turkish flag emblem is clearly visible on his uniform.
+
+Behind him, a modern fighter jet is accelerating at full speed for takeoff. The engines are screaming at full thrust. Bright flames burst from the exhaust. Heat waves distort the air and strong motion blur spreads through the darkness. Deck lights stretch into glowing lines. Crew members appear as fading silhouettes in the shadows.
+
+The atmosphere feels noisy, intense, fast, and slightly uncontrolled — a split second frozen just before the jet leaves the deck. High contrast, sharp flash lighting, cinematic realism, natural grain, dynamic motion blur, 4K resolution.
+</div>
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>
