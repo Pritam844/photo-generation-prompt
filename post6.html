@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST  6 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+Scene and Angle A dynamic street scene shot from a low angle with a wide-angle lens. The model sits on the hood of a vintage red Porsche sports car in the middle of a wide winter city street. In the background, a majestic, monumental Stalin-era skyscraper (stalinskaya vysotka) rises towards the sky. The outstretched hand creates a perspective distortion effect. The person's style Urban Chic style with aviator touches. Voluminous black leather pilot jacket (sheepskin/duplex lining) with thick light-colored fur collar and cuffs. Black wide-leg fabric trousers, black thick-soled lace-up boots. Retro aviator sunglasses worn on the hair. Textures and Details The strong contrast between the car's bright red metal surface and the matte black leather. The detailed sheepskin shearling texture on the jacket, metal zippers, and boot laces are clearly visible. In the background, gray concrete architecture and white snow cover. Pose Assertive and confident. Sitting on the hood, legs wide apart, one knee bent. Right hand actively reached towards the lens, palm forward (foreshortening effect). Left hand resting on the hood. Light and Atmosphere Natural light of a cloudy winter day; no harsh shadows, soft and diffused lighting. Cool surrounding tones contrast with the vibrant red of the car. Metropolitan chic and a sense of winter chill. Post-Production High clarity and photorealism. Background colors slightly desaturated, red tones enhanced. Slight film grain effect. Image Format Vertical, full-size portrait, high resolution.
+</div>
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>

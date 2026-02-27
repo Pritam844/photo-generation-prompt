@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 9 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+Using a person's photograph as an identification reference, create a high-end cinematic
+fashion-editorial portrait shot from behind vertically ribbed/reeded textured glass that intensely refracts the face and gives a "scanning" effect.
+1:1 (or tight vertical 4:5) framing. Clean side profile, face
+camera-facing right, head straight, calm and neutral expression (no smile), shoulders relaxed. Clothing:
+minimal dark top/jacket, no logo, no jewelry. Scene/background: smooth gradient background (#5a0012 → #b10f1c → #ff2a2a) with no visible environment, transitioning from deep
+burgundy to bright red, with a slight
+bloom effect. Lighting: Strong and harsh red main/backlight (~2800–3200k,
+with red gel) from camera-right/rear-right should create bright specular lines on the glass and rim light highlights on the nose/lip/cheek line.
+Very low neutral fill light from camera-left should maintain an almost silhouette effect.
+Bright reflections and bands of light should be emphasized along the corrugated glass; high contrast and crushed shadows should be preferred.
+Optics/Depth of Field: 85mm view, f/2–f/2.8, sharpness should be in the glass plane; corrugated
+lines should be razor-sharp, while the face is slightly softened due to refraction. Micro-contrast, slight grain,
+slight halo in bright areas, ultra-clean editorial retouching. Atmosphere: Intense, hypnotic, abstract, modern
+noir
+</div>
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>

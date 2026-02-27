@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 7 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+Aspect ratio 4:5 vertical. A clean diptych (two-panel) division into top and bottom, with a sharp
+horizontal dividing line in between. ABSOLUTE IDENTITY LOCK: Only @img1 will be used; same face, Hyper
+photorealistic; no AI artifacts, no CGI. No text/logo/watermark. TOP PANEL: Photorealistic close-up of @img1 in a "hiking out" position on a racing sailboat (dinghy). The wind is splashing water onto his face; his jaw is firmly clenched. His hands are burning from holding the sheet line. Sunlight is breaking through the clouds. A cinematic but realistic atmosphere with physically accurate water reflections. BOTTOM PANEL: Extreme macro shot of a wet sheet line passing through a metal
+pulley/block. The fibers are swollen with water, tiny salt crystals are beginning to form. @img1's hand is gripping the rope tightly; reddened pressure marks are visible on the skin. Original angle:
+camera looking out from INSIDE the reel body; water droplets vibrating on the metal as the rope slips.
+Ultra-shallow depth of field, sharp and clear textures.
+</div>
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>

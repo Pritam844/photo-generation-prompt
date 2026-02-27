@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post 1 – Photo Prompt</title>
+
+    <style>
+        /* 🔒 GLOBAL FIX */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+
+            /* ✅ PERFECT CENTERING */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .prompt-box {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>POST 12 – AI PHOTO PROMPT</h1>
+
+    <div class="prompt-box" id="promptText">
+**sahne ve kompozisyon: rol ve estetik:** arka plan kasvetli, kaotik bir parıltı hissi taşıyan kırmızı–
+koyu kırmızı tonlarda olmalı. belirgin desenler olmadan pürüzsüz ve yoğun renk geçişlerine sahip
+olmalı; “çekici” bir atmosfer yaratmalı. amaç, kahramansı bir dokunuşa sahip güçlü ve dinamik bir
+portre üretmek. **kamera açısı (kritik):** çekim alttan açıyla yapılmalı (kameraya doğru bakış). bu
+perspektiften özne güçlü ve dominant görünmeli. Genç adam kameraya kibirli bir ifadeyle düz
+bakıyor. boynunda, görünen tüm alanı elmaslarla kaplı çok kalın bir altın zincir var. Genç adamın
+başının üzerinde, siluetinin arkasından çıkan iki bilinmeyen el, saf altından yapılmış dikenli halka
+formunda bir dalı tutuyor; dal tekil parlama noktaları şeklinde güçlü bir ışıltı yayıyor. eller nano robot
+ellerini andırıyor; karbon fiber kemik yapısına sahip ve parlak, şeffaf plastik görünümlü bir deriyle
+kaplı. eller yanardöner tonlarda parlıyor ve büyük, detaylı biçimde yansıyor. arka plan kırmızı sisle
+kaplı, kasvetli bir atmosferde. **kimlik sabitleme:** kadraj: medium close-up (yüz ve boyun vurgulu).
+**ışık (gösterişli ve renkli):** koruma: yüz hatları, ten tonu, saç modeli ve doğal benzerlik birebir
+korunmalı. palet: parlak kırmızılar ve koyu kırmızılar baskın. evrensel uygulama: ışık ve eğim açısı,
+öznenin cinsiyetinden bağımsız uygulanmalı. **kıyafet ve stil:** ana ışık: yüz yapısını vurgulayan,
+derin ve dramatik gölgeler oluşturan güçlü, yönlü bir ışık (chiaroscuro etkisi). kenar ışığı: omuzları ve
+başı yoğun aydınlatılmış arka plandan ayıran güçlü, dramatik bir kontur ışığı (veya renkli kenar ışığı). 
+kıyafet: hafif aşınma izleri olan, premium yün dokusu görünür oversized siyah tişört. **ruh hali:**
+gizemli, doygun, yüksek kontrastlı stüdyo estetiği. **kalıp:** net ve düzgün oturan. **renk:** parlak
+arka planla kontrast oluşturacak derin mat siyah. **teknik kalite:** stil: yüksek detaylı
+fotogerçekçilik. yüz ifadesi: ciddi, gergin, odaklanmış. özne doğrudan lense değil, başının üzerindeki
+boşluğa, kameranın ötesine bakıyor. doku: yüz üzerinde belirgin vurgu; arka planın pürüzsüz
+geçişleriyle kontrast oluşturmalı.
+</div>
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+</div>
+
+<script>
+function copyPrompt() {
+    const text = document.getElementById("promptText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prompt copied successfully!");
+    });
+}
+</script>
+
+</body>
+</html>
